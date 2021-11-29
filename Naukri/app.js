@@ -96,7 +96,7 @@ app.post("/companies", async(req,res)=>{
     }
 });
 
-app.get("/jobs/type", async(req,res)=>{
+app.get("/jobs/Type", async(req,res)=>{
     try{
     const newjob= await Job.find({Type:"Work From Home"}).lean().exec();
    
@@ -147,7 +147,7 @@ catch(e){
 } 
 
 });
-app.get("job/company",async(req,res)=>{
+app.get("jobs/company",async(req,res)=>{
     try{
         const company=await Job.find().count({company_id});
         return res.status(201).send(company);
