@@ -8,11 +8,10 @@ const router = express.Router();
 
 router.post("/",  async (req, res) => {
   try {
-    const user = req.user;
+  
+    const show= await Show.create(req.body);
 
-    const movie = await Movie.create(req.body);
-
-    return res.status(201).json({ movie });
+    return res.status(201).json({ show });
   } 
   catch (e) {
     return res.status(500).json({ status: "failed", message: e.message });
