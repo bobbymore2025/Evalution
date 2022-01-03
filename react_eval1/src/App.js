@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react"
 import Form from "./components/form"
-import ReciepesDetails from "./components/reciepe"
+
+import Reciepe from "./components/reciepedetail"
 function App() {
   const [data,setData]=React.useState({});
   const handledata=(data)=>{
@@ -10,8 +12,8 @@ function App() {
   }
   return (
   <div className="App">
-    <Form getdata={handledata}/>
-    <ReciepesDetails data={data} />
+    <Form />
+   
     </div>
   );
 }
