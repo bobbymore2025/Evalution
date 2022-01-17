@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch}from "react-redux"
 import {addjob} from "../stores/actions"
+
 export const AdminLogin=()=>{
    const init={company_name:"", title:"", salary:"", description:"", location:"", type:""}
   

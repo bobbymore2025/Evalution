@@ -1,6 +1,6 @@
 import  {ADD_JOB} from "./actionsTypes"
  
-const init={Jobs:[]};
+const init={ Jobs:[] };
 export const reducer=(state=init,{type,payload})=>{
     switch(type){
         case ADD_JOB:
